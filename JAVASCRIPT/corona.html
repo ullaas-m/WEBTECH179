@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,27 +8,39 @@
 </head>
 <body>
     <script>
-        var V = prompt("Enter Virus Composition : ");
-var B = prompt("Enter Blood Composition : ");
+        function positiveornegative(viruscomp,bloodcomp)
+        {
+            var i=0,j=0;
+            while(i<bloodcomp.length)
+            {
+                if(j===viruscomp.length)
+                {
+                    return false;
+                }
+                if(bloodcomp[i]===viruscomp[j])
+                {
+                    i++;
+                }
+                j++;
+            };
+            return true;
+        };
 
-m = V.length;
-n = B.length;
-
-i = 0;
-j = 0;
-
-while (i < m && j < n) {
-  if (V[i] === B[j]) {
-    j++;
-  }
-  i++;
-}
-if (j == n) {
-  console.log("POSITIVE \n");
-} else {
-  console.log("NEGATIVE \n");
-}
-
+        const viruscomp=prompt("enter the virus composition:")
+        var num=prompt(" enter the number of people");
+        var bloodcomp=[num];
+        for(var i=0;i<num;i++)
+        {
+            bloodcomp[i]=prompt(" enter the blood composition of person "+(i+1));
+             var res=positiveornegative(viruscomp,bloodcomp[i]);
+             if(res==true)
+             {
+                 document.write("PERSON "+(i+1)+" POSITIVE<br/>");
+             }
+             else{
+                document.write("PERSON "+(i+1)+" NEGATIVE<br/>"); 
+             }
+        }
     </script>
 </body>
 </html>
