@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let mail = (data) => {
+        let pattern =/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (pattern.test(data)) 
+        document.write("THE ID IS A VALID EMAIL_ID");
+        else document.write("THE ID IS NOT A VALID EMAIL_ID");
+      };
+      email = prompt("PLEASE ENTER EMAIL");
+      mail(email);
+    </script>
+  </body>
+</html>
