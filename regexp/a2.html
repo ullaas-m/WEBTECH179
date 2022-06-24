@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+<title>Flight-hotel book</title>
+</head>
+<body>
+<script>
+let flight=(str)=>new Promise((resolve, reject)=>{
+if(str=='book-flight' || str=='bookflight')
+resolve("flight booked")
+else
+reject("flight blocked")
+})
+
+66
+
+let htl=(str)=>new Promise((resolve, reject)=>{
+if(str=='book-htl' || str=='htl')
+resolve("hotel booked")
+else
+reject("hotel blocked")
+})
+let str1=prompt("\nflight_booking ")
+flight(str1).then((val)=>{alert(val);
+let str2=prompt("\nbook_hotel if u want");
+htl(str2).then((val)=>alert(val))}).catch((val)=>alert(val))
+</script>
+</body>
+</html>
